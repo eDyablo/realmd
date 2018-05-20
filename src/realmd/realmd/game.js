@@ -1,8 +1,15 @@
-define(['./hud']);
+define([
+    './Hud',
+    './Realm'
+], function() {
+    'use strict';
+});
 
 class Game {
     play() {
-        let hud = new Hud(document.body);
-            hud.display('Realmd 1.0');
+        let realm = new Realm(10, 10);
+        realm.create();
+        let hud = new Hud(document, document.body, realm);
+        hud.create();
     }
 }
