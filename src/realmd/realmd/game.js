@@ -1,4 +1,8 @@
-define(function(require) {
-    'use strict';
-    var realm = require('./realm'); 
-});
+define(['./hud']);
+
+class Game {
+    play() {
+        let hud = new Hud(document.body);
+            hud.display('Realmd 1.0');
+    }
+}
